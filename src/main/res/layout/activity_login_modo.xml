@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".login_modo">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_person_black_24dp"
+            android:id="@+id/ImageViewImagen"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TextViewNombre"
+            android:text="Nombre"
+            android:textSize="17dp"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TextViewEmail"
+            android:text="Email"
+            android:textSize="17dp"
+            android:textColor="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:id="@+id/RadioGroupModo">
+
+        <RadioButton
+            android:id="@+id/RadioButtonPostulante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/common_google_signin_btn_text_dark_default"
+            android:checked="false"
+            android:text="Postulante"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
+        <RadioButton
+            android:id="@+id/RadioButtonEmpleador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/common_google_signin_btn_text_dark_default"
+            android:checked="false"
+            android:text="Empleador"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/ButtonConfirmar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/holo_green_dark"
+        android:text="Confirmar"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/ButtonCerrarSesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/holo_red_light"
+        android:text="Cerrar sesion"
+        android:textColor="#fff" />
+
+
+
+
+</LinearLayout>

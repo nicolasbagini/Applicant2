@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ingreso_empleador">
+
+
+    <EditText
+        android:id="@+id/EditTextRazonSocial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="ingresar razon social" />
+
+
+    <EditText
+        android:id="@+id/EditTextCuit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="ingresar cuit"/>
+
+    <EditText
+        android:id="@+id/EditTextFechaInicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="01/01/1900" />
+
+
+    <EditText
+        android:id="@+id/EditTextTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="ingresar telefono"/>
+
+    <EditText
+        android:id="@+id/EditTextDireccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="ingresar direccion"/>
+
+
+    <Button
+        android:id="@+id/ButtonGuardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:backgroundTint="@android:color/holo_purple"
+        android:layout_marginTop="20dp"
+        android:text="Guardar" />
+
+</LinearLayout>

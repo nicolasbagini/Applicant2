@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.perfil.perfilFragment">
+
+    <Spinner
+        android:id="@+id/spinnerModo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
+
+
+    <EditText
+        android:id="@+id/EditTextNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="ingresar nombres" />
+
+    <EditText
+        android:id="@+id/EditTextApellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="ingresar apellidos"/>
+
+    <Spinner
+        android:id="@+id/spinnerTipoDocumento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/EditTextDocumento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="ingresar documento"/>
+
+    <EditText
+        android:id="@+id/EditTextFechaNacimiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="01/01/1900" />
+
+    <Spinner
+        android:id="@+id/spinnerNaciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonFemenino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Femenino" />
+
+        <RadioButton
+            android:checked="false"
+            android:id="@+id/radioButtonMasculino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masculino" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/EditTextTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="ingresar telefono"/>
+
+    <EditText
+        android:id="@+id/EditTextDireccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="ingresar direccion"/>
+
+    <EditText
+        android:id="@+id/EditTextOficio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="ingresar oficio"/>
+
+    <Button
+        android:id="@+id/ButtonGuardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:layout_marginTop="20dp"
+        android:text="Guardar" />
+
+</LinearLayout>
+
+
