@@ -108,7 +108,69 @@ public class ingreso_empleador extends AppCompatActivity {
     }
     public boolean verificarCampos(){
         boolean ok=false;
-        ok=true;
+
+        String stringValido = "^[A-Za-z]{1,}$";
+
+        String razonSocial = obtenerRazonSocial();
+        if (razonSocial.equals("") || razonSocial != stringValido) {
+            if (razonSocial.equals("")) {
+                EditTextRazonSocial.setError("La razon social esta vacia");
+            } else {
+                EditTextRazonSocial.setError("Debe ingresar una razon social valida");
+            }
+            ok=false;
+        }else{
+            ok=true;
+        }
+
+        String cuit = obtenerCuit();
+        if (cuit.equals("") || cuit != stringValido) {
+            if (cuit.equals("")) {
+                EditTextCuit.setError("El cuit esta vacio");
+            } else {
+                EditTextCuit.setError("Debe ingresar un cuit valido");
+            }
+            ok=false;
+        }else{
+            ok=true;
+        }
+
+        String fechaInicio = obtenerFechaInicio();
+        if (fechaInicio.equals("") || fechaInicio != stringValido) {
+            if (fechaInicio.equals("")) {
+                EditTextFechaInicio.setError("La fecha de inicio esta vacia");
+            } else {
+                EditTextFechaInicio.setError("Debe ingresar una fecha de inicio valida");
+            }
+            ok=false;
+        }else{
+            ok=true;
+        }
+
+        String telefono = obtenerTelefono();
+        if (telefono.equals("") || telefono != stringValido) {
+            if (telefono.equals("")) {
+                EditTextTelefono.setError("El telefono esta vacio");
+            } else {
+                EditTextTelefono.setError("Debe ingresar un telefono valido");
+            }
+            ok=false;
+        }else{
+            ok=true;
+        }
+
+        String direccion = obtenerDireccion();
+        if (direccion.equals("") || direccion != stringValido) {
+            if (direccion.equals("")) {
+                EditTextDireccion.setError("La direccion esta vacia");
+            } else {
+                EditTextDireccion.setError("Debe ingresar una direccion valida");
+            }
+            ok=false;
+        }else{
+            ok=true;
+        }
+
         return ok;
     }
     public String obtenerModo(){

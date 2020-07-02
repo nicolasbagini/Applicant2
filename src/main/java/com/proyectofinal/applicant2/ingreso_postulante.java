@@ -296,7 +296,117 @@ public class ingreso_postulante extends AppCompatActivity {
     }
     public boolean verificarCampos(){
         boolean ok=false;
-        ok=true;
+
+        /*//registration button code
+        btn_registration = (Button) findViewById(R.id.buttonRegister);
+        btn_registration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                uname = edittext_username.getText().toString();
+                password = edittext_Password.getText().toString();
+                phone = edittext_phone.getText().toString();
+                if (uname.equals("") || uname.length() <= 3 || uname != nameValidate) {
+                    if (uname.equals("")) {
+                        edittext_username.setError("Name cannot be Blank");
+                    } else {
+                        edittext_username.setError("Enter Valid Name");
+                    }
+                }*/
+
+        String stringValido = "^[A-Za-z]{1,}$";
+        //String stringValido = "^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$";
+        String intValido = "^[2-9]{2}[0-9]{8}$";
+        //String passwordpattern = "((?=.*[a-z])(?=.*\\d)(?=.*[A-Z])(?=.*[@#$%!]).{8,40})";
+
+
+        String nombre = obtenerNombre();
+        if (nombre.equals("") || nombre != stringValido) {
+            if (nombre.equals("")) {
+                EditTextNombre.setError("El nombre esta vacio");
+            } else {
+                EditTextNombre.setError("Debe ingresar un nombre valido");
+            }
+            ok=false;
+        }else{
+            ok=true;
+        }
+
+        String apellido = obtenerApellido();
+        if (apellido.equals("") || apellido != stringValido) {
+            if (apellido.equals("")) {
+                EditTextApellido.setError("El apellido esta vacio");
+            } else {
+                EditTextApellido.setError("Debe ingresar un apellido valido");
+            }
+            ok=false;
+        }else{
+            ok=true;
+        }
+
+        String documento = obtenerDocumento();
+        if (documento.equals("") || documento != stringValido) {
+            if (documento.equals("")) {
+                EditTextDocumento.setError("El documento esta vacio");
+            } else {
+                EditTextDocumento.setError("Debe ingresar un documento valido");
+            }
+            ok=false;
+        }else{
+            ok=true;
+        }
+
+        String telefono = obtenerTelefono();
+        if (telefono.equals("") || telefono != intValido) {
+            if (telefono.equals("")) {
+                EditTextTelefono.setError("El telefono esta vacio");
+            } else {
+                EditTextTelefono.setError("Debe ingresar un telefono valido");
+            }
+            ok=false;
+        }else{
+            ok=true;
+        }
+
+        String direccion = obtenerDireccion();
+        if (direccion.equals("") || direccion != stringValido) {
+            if (direccion.equals("")) {
+                EditTextDireccion.setError("La direccion esta vacia");
+            } else {
+                EditTextDireccion.setError("Debe ingresar una direccion valida");
+            }
+            ok=false;
+        }else{
+            ok=true;
+        }
+
+        String fechaNacimiento = obtenerFechaNacimiento();
+        if (fechaNacimiento.equals("") || fechaNacimiento != stringValido) {
+            if (fechaNacimiento.equals("")) {
+                EditTextFechaNacimiento.setError("La fecha de nacimiento esta vacia");
+            } else {
+                EditTextFechaNacimiento.setError("Debe ingresar una fecha de nacimiento valida");
+            }
+            ok=false;
+        }else{
+            ok=true;
+        }
+
+                /*//Toast.makeText(getApplicationContext(), "Please enter username upto 6char", 1000).show();
+
+                if (password.equals("") || password.length() < 3) {
+                    // Toast.makeText(getApplicationContext(), "please enter password upto 6char ", 1000).show();
+                    edittext_Password.setError("Password cannot be blank");
+
+                }
+
+                if (phone.equals("") || phone.length() < 10) {
+                    edittext_phone.setError("Invalid mobile number");
+                    //Toast.makeText(getApplicationContext(), "please entermobile number must be 10 digit", 1000).show();
+                }
+                if (uname == null && uname.equals(nameValidate) || password == null || phone == null) {
+                    confirmOtp();
+                }*/
+
         return ok;
     }
     public String obtenerModo(){
